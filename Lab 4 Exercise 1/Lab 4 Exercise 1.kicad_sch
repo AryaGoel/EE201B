@@ -301,8 +301,47 @@
         )
       )
     )
+    (symbol "power:GND" (power) (pin_names (offset 0)) (in_bom yes) (on_board yes)
+      (property "Reference" "#PWR" (id 0) (at 0 -6.35 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "Value" "GND" (id 1) (at 0 -3.81 0)
+        (effects (font (size 1.27 1.27)))
+      )
+      (property "Footprint" "" (id 2) (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "Datasheet" "" (id 3) (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_keywords" "global power" (id 4) (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_description" "Power symbol creates a global label with name \"GND\" , ground" (id 5) (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (symbol "GND_0_1"
+        (polyline
+          (pts
+            (xy 0 0)
+            (xy 0 -1.27)
+            (xy 1.27 -1.27)
+            (xy 0 -2.54)
+            (xy -1.27 -1.27)
+            (xy 0 -1.27)
+          )
+          (stroke (width 0) (type default) (color 0 0 0 0))
+          (fill (type none))
+        )
+      )
+      (symbol "GND_1_1"
+        (pin power_in line (at 0 0 270) (length 0) hide
+          (name "GND" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27))))
+        )
+      )
+    )
   )
-
 
   (junction (at 91.44 44.45) (diameter 0) (color 0 0 0 0)
     (uuid 76edf6b8-36c1-4c5a-aedc-e1cc50a214aa)
@@ -471,6 +510,22 @@
     (pin "3" (uuid 9be2abe3-f6e8-4683-9800-cb94ae63c541))
   )
 
+  (symbol (lib_id "power:GND") (at 107.95 85.09 0) (unit 1)
+    (in_bom yes) (on_board yes) (fields_autoplaced)
+    (uuid b94fadd7-c1e7-4fa7-b75f-db21dbfef302)
+    (property "Reference" "#PWR0101" (id 0) (at 107.95 91.44 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "GND" (id 1) (at 107.95 90.17 0))
+    (property "Footprint" "" (id 2) (at 107.95 85.09 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (id 3) (at 107.95 85.09 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid fa75bbf1-6587-4cbc-8f01-4f8ef53a6468))
+  )
+
   (symbol (lib_id "Device:C_Polarized") (at 107.95 57.15 0) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid bbcaf60c-8637-4c94-986e-92f7c9b2c30a)
@@ -495,6 +550,9 @@
   )
 
   (symbol_instances
+    (path "/b94fadd7-c1e7-4fa7-b75f-db21dbfef302"
+      (reference "#PWR0101") (unit 1) (value "GND") (footprint "")
+    )
     (path "/bbcaf60c-8637-4c94-986e-92f7c9b2c30a"
       (reference "C1") (unit 1) (value "4.7 mu F") (footprint "Capacitor_THT:C_Radial_D5.0mm_H5.0mm_P2.00mm")
     )
